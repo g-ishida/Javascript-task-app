@@ -1,0 +1,18 @@
+td {
+    border: 1px solid black;
+}
+
+/* 作業中ボタン・削除ボタン */
+.doing {
+    display: flex;
+    margin: 10px auto;
+}
+.delete {
+    flex-direction: row;
+    width: 5%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.hidden {
+    display: none;
+}
