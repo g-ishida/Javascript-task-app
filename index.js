@@ -29,6 +29,11 @@
 
         console.log(tasks[i]); //後で削除
 
+        // クリックでボタンを追加
+        const doingButton = document.createElement('input');
+        doingButton.type = 'button';
+        doingButton.value = '作業中';
+        
         // 表の処理
         let addTableRow = () => {
             let row = table.insertRow(-1);
@@ -39,21 +44,23 @@
 
             cell1.innerHTML = i;
             cell2.innerHTML = taskName;
-            cell3.innerHTML = 'ボタン';
+            cell3.innerHTML = doingButton;//これよりも上でボタンを生成する
+            
+          
         }
-
         addTableRow();
-
-
-        // クリックでボタンを追加
-
-
-        // IDのカウント用の変数
-        i++;
 
         
 
 
+         // IDのカウント用の変数
+         i++;
+
+
+
+         
+
+        
 
         
         
