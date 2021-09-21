@@ -29,10 +29,20 @@
 
         console.log(tasks[i]); //後で削除
 
+
         // クリックでボタンを追加
+        // 作業中ボタン
         const doingButton = document.createElement('input');
         doingButton.type = 'button';
         doingButton.value = '作業中';
+        document.body.appendChild(doingButton);
+        // 削除ボタン
+        const deleteButton = document.createElement('input');
+        deleteButton.type = 'button';
+        deleteButton.value = '削除';
+        document.body.appendChild(deleteButton);
+
+        
         
         // 表の処理
         let addTableRow = () => {
@@ -44,11 +54,15 @@
 
             cell1.innerHTML = i;
             cell2.innerHTML = taskName;
-            cell3.innerHTML = doingButton;//これよりも上でボタンを生成する
+            cell3.innerHTML = doingButton;
+
+         
             
           
         }
         addTableRow();
+
+
 
         
 
