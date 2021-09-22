@@ -29,18 +29,17 @@
 
         console.log(tasks[i]); //後で削除
 
-
         // クリックでボタンを追加
         // 作業中ボタン
         const doingButton = document.createElement('input');
         doingButton.type = 'button';
         doingButton.value = '作業中';
-        document.body.appendChild(doingButton);
+        table.appendChild(doingButton);
         // 削除ボタン
         const deleteButton = document.createElement('input');
         deleteButton.type = 'button';
         deleteButton.value = '削除';
-        document.body.appendChild(deleteButton);
+        table.appendChild(deleteButton);
 
         
         
