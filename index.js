@@ -33,20 +33,29 @@
 
         // クリックでボタンを追加
         // 作業中ボタン
-        const deleteButton = document.createElement('button');
-        deleteButton.innerHTML = '削除';
         const nowButton = document.createElement('button');
         nowButton.innerHTML = '作業中';
-        
+        const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = '削除';
         
         // 表の処理
         // tbodyの中にtrを追加→tdを追加→inputでボタンを生成
         // appendCHildがどこに生成されるか分かってない
+        // まず、tr
         const newTr = document.createElement('tr');
         tbody.appendChild(newTr);
+        // そして、td、左から、
+        const tableID = document.createElement('td');
+        tableID.innerHTML = i;
+        tbody.appendChild(tableID);
 
+        const tableTask = document.createElement('td');
+        tableTask.innerHTML = taskName;
+        tbody.appendChild(tableTask);
 
-
+        
+        tbody.appendChild(nowButton);
+        tbody.appendChild(deleteButton);
          // IDのカウント用の変数
          i++;        
     });
