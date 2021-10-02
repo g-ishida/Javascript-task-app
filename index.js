@@ -12,9 +12,6 @@
     const table = document.getElementById('targetTable');
     const tbody = document.getElementById('tbody');
 
-  
-
-
     // デフォルトで持っているタスク配列
     let tasks = [
         //{id:0, comment:'', status:}
@@ -26,10 +23,7 @@
 
         let taskName = inputTask.value; //追加したいタスク
         inputTask.value = ""; //inputの中身を空にする
-        // statuキーには作業中ボタンと完了ボタンを追加
         tasks.push({id: i, comment: taskName});//tasks配列の最後に追加
-
-        console.log(tasks[i]); //後で削除
 
         // クリックでボタンを追加
         // 作業中ボタン
@@ -38,22 +32,21 @@
         const deleteButton = document.createElement('button');
         deleteButton.innerHTML = '削除';
         
-        // 表の処理
         // tbodyの中にtrを追加→tdを追加→inputでボタンを生成
         // appendCHildがどこに生成されるか分かってない
         // まず、tr
         const newTr = document.createElement('tr');
         tbody.appendChild(newTr);
+
         // そして、td、左から、
         const tableID = document.createElement('td');
         tableID.innerHTML = i;
         tbody.appendChild(tableID);
-
+        // タスク名
         const tableTask = document.createElement('td');
         tableTask.innerHTML = taskName;
         tbody.appendChild(tableTask);
-
-        
+        // ボタン２個
         tbody.appendChild(nowButton);
         tbody.appendChild(deleteButton);
          // IDのカウント用の変数
