@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>タスク管理アプリ</title>
-    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <h1>ToDoリスト</h1>
@@ -14,12 +13,28 @@
     <!-- 表に追加していく -->
     <table id="targetTable">
         <thead>
-            <tr><th>ID</th><th>コメント</th><th>状態</th></tr>
+            <tr>
+                <th>ID</th>
+                <th>コメント</th>
+                <th>状態</th>
+            </tr>
         </thead>
-        <tbody>
-            <tr><td>　</td><td>　</td><td>　</td></tr>
+        <tbody id="tbody">
+            <tr>
+                <td>1</td>
+                <td>task1</td>
+                <td><button>作業中</button></td>
+                <td><button>削除</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>task2</td>
+                <td><button>作業中</button></td>
+                <td><button>削除</button></td>
+            </tr>
         </tbody>
     </table>
+    
     <h1>新規タスクの追加</h1>
 　  <input type="text" id="input-task">
     <input type="submit" id="add" value="追加">

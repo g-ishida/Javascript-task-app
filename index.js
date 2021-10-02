@@ -1,3 +1,4 @@
+// 他のエンジニアが似た様な実装しているやつを真似・参考にする
 'use strict'
 {
     // http://www.fineblue206.net/archives/460
@@ -9,6 +10,7 @@
     const inputTask = document.getElementById('input-task');
     const add = document.getElementById('add');
     const table = document.getElementById('targetTable');
+    const tbody = document.getElementById('tbody');
 
   
 
@@ -31,52 +33,22 @@
 
         // クリックでボタンを追加
         // 作業中ボタン
-        const doingButton = document.createElement('input');
-        doingButton.type = 'button';
-        doingButton.value = '作業中';
-        table.appendChild(doingButton);
-        // 削除ボタン
-        const deleteButton = document.createElement('input');
-        deleteButton.type = 'button';
-        deleteButton.value = '削除';
-        table.appendChild(deleteButton);
-
+        const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = '削除';
+        const nowButton = document.createElement('button');
+        nowButton.innerHTML = '作業中';
         
         
         // 表の処理
-        let addTableRow = () => {
-            let row = table.insertRow(-1);
+        // tbodyの中にtrを追加→tdを追加→inputでボタンを生成
+        // appendCHildがどこに生成されるか分かってない
+        const newTr = document.createElement('tr');
+        tbody.appendChild(newTr);
 
-            let cell1 = row.insertCell(0);
-            let cell2 = row.insertCell(1);
-            let cell3 = row.insertCell(2);
-
-            cell1.innerHTML = i;
-            cell2.innerHTML = taskName;
-            cell3.innerHTML = doingButton;
-
-         
-            
-          
-        }
-        addTableRow();
-
-
-
-        
 
 
          // IDのカウント用の変数
-         i++;
-
-
-
-         
-
-        
-
-        
-        
+         i++;        
     });
 
 
