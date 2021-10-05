@@ -47,6 +47,10 @@
         let taskName = inputTask.value; //追加したいタスク
         inputTask.value = ""; //inputの中身を空にする
         tasks.push({comment: taskName, status: '作業中'});//tasks配列の最後に追加
+        
+        tasks.forEach(function(task){
+            console.log(task);
+        });
 
 
         // // tbodyの中にtrを追加→tdを追加→inputでボタンを生成
